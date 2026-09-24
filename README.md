@@ -12,6 +12,7 @@ and [MigLayout](https://github.com/mikaelgrev/miglayout/). Each module under the
 
 | Module                                   | Description                                                                             |
 |------------------------------------------|-----------------------------------------------------------------------------------------|
+| [`skeleton`](skeleton) | `JLayer` skeleton loader that draws shimmering placeholders from the real layout while data loads. |
 | [`tree-hover-action`](tree-hover-action) | `JTree` demo with hover-triggered row actions and drag-and-drop reordering/reparenting. |
 
 ## License

@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>tree-hover-action</module>
+        <module>skeleton</module>
     </modules>
 
     <properties>
