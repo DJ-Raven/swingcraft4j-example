@@ -13,6 +13,7 @@
         <module>skeleton</module>
         <module>badge-notification</module>
         <module>loading</module>
+        <module>switch-button</module>
     </modules>
 
     <properties>
