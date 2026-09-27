@@ -12,6 +12,7 @@
         <module>tree-hover-action</module>
         <module>skeleton</module>
         <module>badge-notification</module>
+        <module>loading</module>
     </modules>
 
     <properties>

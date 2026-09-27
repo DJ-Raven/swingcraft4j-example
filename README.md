@@ -10,11 +10,12 @@ and [MigLayout](https://github.com/mikaelgrev/miglayout/). Each module under the
 
 ## Modules
 
-| Module                                   | Description                                                                             |
-|------------------------------------------|-----------------------------------------------------------------------------------------|
-| [`badge-notification`](badge-notification) | `JLayer` notification badge (count, text or dot) with pop and alert animations on any component corner. |
-| [`skeleton`](skeleton) | `JLayer` skeleton loader that draws shimmering placeholders from the real layout while data loads. |
-| [`tree-hover-action`](tree-hover-action) | `JTree` demo with hover-triggered row actions and drag-and-drop reordering/reparenting. |
+| Module                                     | Description                                                                                                             |
+|--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| [`tree-hover-action`](tree-hover-action)   | `JTree` demo with hover-triggered row actions and drag-and-drop reordering/reparenting.                                 |
+| [`skeleton`](skeleton)                     | `JLayer` skeleton loader that draws shimmering placeholders from the real layout while data loads.                      |
+| [`badge-notification`](badge-notification) | `JLayer` notification badge (count, text or dot) with pop and alert animations on any component corner.                 |
+| [`loading`](loading)                       | Animated loading `Icon` with built-in types, one class each, and custom painters.                                       |
 
 ## License
 
