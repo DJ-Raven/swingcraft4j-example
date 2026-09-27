@@ -5,6 +5,7 @@ import com.formdev.flatlaf.icons.FlatAnimatedIcon;
 import com.formdev.flatlaf.ui.FlatStylingSupport;
 import com.formdev.flatlaf.ui.FlatStylingSupport.Styleable;
 import com.formdev.flatlaf.util.ColorFunctions;
+import com.formdev.flatlaf.util.UIScale;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,8 +24,8 @@ public class SwitchIcon extends FlatAnimatedIcon {
     public static final int DEFAULT_WIDTH = 36;
     public static final int DEFAULT_HEIGHT = 20;
 
-    // room around the switch for the focus ring
-    private static final int FOCUS_WIDTH = 3;
+    // ring width when the theme gives none
+    private static final float DEFAULT_FOCUS_WIDTH = 2;
     private static final float FOCUS_GAP = 1;
     private static final int DEFAULT_DURATION = 200;
     // how much of the accent a soft part keeps, blended into the background
@@ -43,6 +44,8 @@ public class SwitchIcon extends FlatAnimatedIcon {
     protected int duration = -1;
     @Styleable
     protected boolean focusPainted = true;
+    @Styleable
+    protected float focusWidth = -1;
 
     private final SwitchType type;
     // components this icon was painted on, repainted when a setting changes
@@ -60,7 +63,7 @@ public class SwitchIcon extends FlatAnimatedIcon {
      * Switch of the given unscaled size, not counting the focus ring around it.
      */
     public SwitchIcon(SwitchType type, int width, int height) {
-        super(width + FOCUS_WIDTH * 2, height + FOCUS_WIDTH * 2, null);
+        super(width, height, null);
         this.type = type != null ? type : SwitchType.CLASSIC;
     }
 
@@ -129,6 +132,29 @@ public class SwitchIcon extends FlatAnimatedIcon {
         repaintComponents();
     }
 
+    /**
+     * Focus ring width; {@code -1} uses {@code Switch.focusWidth}, then {@code CheckBox.icon.focusWidth}, then {@code Component.focusWidth}.
+     */
+    public float getFocusWidth() {
+        return focusWidth;
+    }
+
+    public void setFocusWidth(float focusWidth) {
+        this.focusWidth = focusWidth;
+        repaintComponents();
+    }
+
+    // the icon grows with the focus ring, so the ring always fits inside it
+    @Override
+    public int getIconWidth() {
+        return UIScale.scale(width + focusMargin() * 2);
+    }
+
+    @Override
+    public int getIconHeight() {
+        return UIScale.scale(height + focusMargin() * 2);
+    }
+
     @Override
     public int getAnimationDuration() {
         return duration > 0 ? duration : DEFAULT_DURATION;
@@ -146,9 +172,10 @@ public class SwitchIcon extends FlatAnimatedIcon {
             components.add(c);
         }
         Graphics2D g2 = (Graphics2D) g;
-        float w = width - FOCUS_WIDTH * 2;
-        float h = height - FOCUS_WIDTH * 2;
-        g2.translate(x + FOCUS_WIDTH, y + FOCUS_WIDTH);
+        float w = width;
+        float h = height;
+        int margin = focusMargin();
+        g2.translate(x + margin, y + margin);
 
         Color background = c != null ? c.getBackground() : UIManager.getColor("Panel.background");
         Color accent = ColorFunctions.mix(resolveOn(), resolveOff(background), value);
@@ -211,7 +238,7 @@ public class SwitchIcon extends FlatAnimatedIcon {
         // translucent focus colors are flattened onto the background so overlaps don't show
         Color focus = UIManager.getColor("Component.focusColor");
         focus = ColorFunctions.mix(new Color(focus.getRGB() & 0xffffff), background, focus.getAlpha() / 255f);
-        Area ring = new Area(pill(x, y, w, h, FOCUS_WIDTH));
+        Area ring = new Area(pill(x, y, w, h, FOCUS_GAP + resolveFocusWidth()));
         ring.subtract(new Area(pill(x, y, w, h, FOCUS_GAP)));
         g2.setColor(focus);
         g2.fill(ring);
@@ -229,6 +256,13 @@ public class SwitchIcon extends FlatAnimatedIcon {
         for (Component c : components) {
             c.repaint();
         }
+    }
+
+    /**
+     * Room kept around the switch for the gap and focus ring, in whole unscaled pixels.
+     */
+    private int focusMargin() {
+        return (int) Math.ceil(FOCUS_GAP + resolveFocusWidth());
     }
 
     private Color tone(SwitchType.Tone tone, Color accent, Color background) {
@@ -264,5 +298,17 @@ public class SwitchIcon extends FlatAnimatedIcon {
         }
         Color color = UIManager.getColor("Switch.thumbColor");
         return color != null ? color : Color.WHITE;
+    }
+
+    private float resolveFocusWidth() {
+        if (focusWidth >= 0) {
+            return focusWidth;
+        }
+        for (String key : new String[]{"Switch.focusWidth", "CheckBox.icon.focusWidth", "Component.focusWidth"}) {
+            if (UIManager.get(key) instanceof Number n && n.floatValue() > 0) {
+                return n.floatValue();
+            }
+        }
+        return DEFAULT_FOCUS_WIDTH;
     }
 }

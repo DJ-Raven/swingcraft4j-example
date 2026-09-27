@@ -45,7 +45,7 @@ wifi.addActionListener(e -> setWifi(wifi.isSelected()));
 new SwitchIcon(SwitchType.INSET, 48, 26);  // unscaled width and height
 ```
 
-The icon is 3 px bigger on each side than the switch, which leaves room for the focus ring.
+The icon is bigger than the switch on each side by a 1 px gap plus the focus ring width, which leaves room for the focus ring.
 
 ### 4. Colors and speed
 
@@ -56,6 +56,7 @@ icon.setOffColor(Color.GRAY);
 icon.setThumbColor(Color.WHITE);  // the white thumb of CLASSIC, INSET, OVERHANG, LINE and SOFT
 icon.setDuration(300);            // toggle animation in ms, 200 by default
 icon.setFocusPainted(false);      // no focus ring, while the switch stays focusable
+icon.setFocusWidth(3);            // focus ring width, from the theme by default
 ```
 
 Or with a FlatLaf style string:
@@ -71,6 +72,7 @@ icon.setStyle("onColor:$Actions.Green;duration:300;focusPainted:false");
 | `thumbColor` | Color of white thumbs. If it isn't set, the icon uses `Switch.thumbColor`, then white. |
 | `duration` | Length of the toggle animation in milliseconds. |
 | `focusPainted` | Whether the focus ring is painted. Defaults to `true`. |
+| `focusWidth` | Width of the focus ring. If it isn't set, the icon uses `Switch.focusWidth`, then `CheckBox.icon.focusWidth`, then `Component.focusWidth`, then 2. |
 
 Colors are resolved on every paint, so the switch follows theme changes. Changing a setting or style repaints every button showing the icon, so a visible switch updates right away.
 
@@ -93,7 +95,10 @@ The defaults can also come from your FlatLaf properties file:
 Switch.onColor=$Component.accentColor
 Switch.offColor=#c4c8cf
 Switch.thumbColor=#ffffff
+Switch.focusWidth=2
 ```
+
+The focus ring width follows the theme like FlatLaf's own check box: 1 px in FlatLaf Light and Dark, 2 px in IntelliJ and Darcula. The icon's size follows it too, so a theme change re-lays out the switch.
 
 ### 5. Settings row
 
