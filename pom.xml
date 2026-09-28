@@ -15,6 +15,7 @@
         <module>loading</module>
         <module>switch-button</module>
         <module>help-tooltip</module>
+        <module>liquid-progress-indicator</module>
     </modules>
 
     <properties>

@@ -10,14 +10,15 @@ and [MigLayout](https://github.com/mikaelgrev/miglayout/). Each module under the
 
 ## Modules
 
-| Module                                     | Description                                                                                                             |
-|--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [`tree-hover-action`](tree-hover-action)   | `JTree` demo with hover-triggered row actions and drag-and-drop reordering/reparenting.                                 |
-| [`skeleton`](skeleton)                     | `JLayer` skeleton loader that draws shimmering placeholders from the real layout while data loads.                      |
-| [`badge-notification`](badge-notification) | `JLayer` notification badge (count, text or dot) with pop and alert animations on any component corner.                 |
-| [`loading`](loading)                       | Animated loading `Icon` with built-in types, one class each, and custom painters.                                       |
-| [`switch-button`](switch-button)           | Animated switch `Icon` for `JCheckBox`/`JToggleButton` with eight types, FlatLaf styling and a focus ring.              |
-| [`help-tooltip`](help-tooltip)             | Rich help tooltip with title, shortcut, description and link, ported from IntelliJ's `HelpTooltip`.                     |
+| Module                                                   | Description                                                                                                      |
+|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| [`tree-hover-action`](tree-hover-action)                 | `JTree` demo with hover-triggered row actions and drag-and-drop reordering/reparenting.                          |
+| [`skeleton`](skeleton)                                   | `JLayer` skeleton loader that draws shimmering placeholders from the real layout while data loads.               |
+| [`badge-notification`](badge-notification)               | `JLayer` notification badge (count, text or dot) with pop and alert animations on any component corner.          |
+| [`loading`](loading)                                     | Animated loading `Icon` with built-in types, one class each, and custom painters.                                |
+| [`switch-button`](switch-button)                         | Animated switch `Icon` for `JCheckBox`/`JToggleButton` with eight types, FlatLaf styling and a focus ring.       |
+| [`help-tooltip`](help-tooltip)                           | Rich help tooltip with title, shortcut, description and link, ported from IntelliJ's `HelpTooltip`.              |
+| [`liquid-progress-indicator`](liquid-progress-indicator) | Liquid progress meter with animated waves, rising bubbles and eight styles, from a circle to a battery or flask. |
 
 ## License
 
