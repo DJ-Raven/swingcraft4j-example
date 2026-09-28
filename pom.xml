@@ -14,6 +14,7 @@
         <module>badge-notification</module>
         <module>loading</module>
         <module>switch-button</module>
+        <module>help-tooltip</module>
     </modules>
 
     <properties>

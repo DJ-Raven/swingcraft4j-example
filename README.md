@@ -17,6 +17,7 @@ and [MigLayout](https://github.com/mikaelgrev/miglayout/). Each module under the
 | [`badge-notification`](badge-notification) | `JLayer` notification badge (count, text or dot) with pop and alert animations on any component corner.                 |
 | [`loading`](loading)                       | Animated loading `Icon` with built-in types, one class each, and custom painters.                                       |
 | [`switch-button`](switch-button)           | Animated switch `Icon` for `JCheckBox`/`JToggleButton` with eight types, FlatLaf styling and a focus ring.              |
+| [`help-tooltip`](help-tooltip)             | Rich help tooltip with title, shortcut, description and link, ported from IntelliJ's `HelpTooltip`.                     |
 
 ## License
 
