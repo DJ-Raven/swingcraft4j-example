@@ -16,6 +16,7 @@
         <module>switch-button</module>
         <module>help-tooltip</module>
         <module>liquid-progress-indicator</module>
+        <module>qr-code-generator</module>
     </modules>
 
     <properties>
