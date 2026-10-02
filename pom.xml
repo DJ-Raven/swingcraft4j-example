@@ -17,6 +17,7 @@
         <module>help-tooltip</module>
         <module>liquid-progress-indicator</module>
         <module>qr-code-generator</module>
+        <module>animated-jfreechart</module>
     </modules>
 
     <properties>
