@@ -21,6 +21,7 @@ and [MigLayout](https://github.com/mikaelgrev/miglayout/). Each module under the
 | [`liquid-progress-indicator`](liquid-progress-indicator) | Liquid progress meter with animated waves, rising bubbles and eight styles, from a circle to a battery or flask. |
 | [`qr-code-generator`](qr-code-generator)                 | Styled QR code component with custom body and eye shapes, gradients and a center logo, encoded with ZXing.      |
 | [`animated-jfreechart`](animated-jfreechart)             | JFreeChart charts with animated intros and value changes, styled from the FlatLaf theme.                        |
+| [`login-3d`](login-3d)                                   | macOS style login card over ten mouse-reactive 3D backgrounds drawn with Java2D, in light or dark accent themes. |
 
 ## License
 

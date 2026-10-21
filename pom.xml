@@ -18,6 +18,7 @@
         <module>liquid-progress-indicator</module>
         <module>qr-code-generator</module>
         <module>animated-jfreechart</module>
+        <module>login-3d</module>
     </modules>
 
     <properties>
