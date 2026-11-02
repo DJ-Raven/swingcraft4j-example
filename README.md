@@ -22,6 +22,7 @@ and [MigLayout](https://github.com/mikaelgrev/miglayout/). Each module under the
 | [`qr-code-generator`](qr-code-generator)                 | Styled QR code component with custom body and eye shapes, gradients and a center logo, encoded with ZXing.      |
 | [`animated-jfreechart`](animated-jfreechart)             | JFreeChart charts with animated intros and value changes, styled from the FlatLaf theme.                        |
 | [`login-3d`](login-3d)                                   | macOS style login card over ten mouse-reactive 3D backgrounds drawn with Java2D, in light or dark accent themes. |
+| [`product-card-3d`](product-card-3d)                     | Product card that tilts in 3D toward the mouse while its product image pops out with parallax, in pure Java2D.   |
 
 ## License
 
