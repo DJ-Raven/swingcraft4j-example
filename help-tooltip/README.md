@@ -1,5 +1,7 @@
 # Help Tooltip
 
+![Help Tooltip](thumbnail.jpg)
+
 Rich tooltip (`HelpTooltip`) for any `JComponent`, a Swing and FlatLaf port of IntelliJ's `HelpTooltip`. On top of a title it can show a shortcut, a description of one or more paragraphs, and a link. It opens in a popup that can extend past the window, with FlatLaf's drop shadow and rounded corners.
 
 - **Content**: title, shortcut, HTML description with paragraphs, and an action or browser link.

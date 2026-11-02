@@ -1,5 +1,7 @@
 # Liquid Progress Indicator
 
+![Liquid Progress Indicator](thumbnail.jpg)
+
 Progress meter (`LiquidProgress`) drawn as liquid filling a container: a round gauge, a box, a battery, a flask and more. Two sine waves move across the surface in opposite directions, bubbles rise through the liquid, and the percentage is shown in the middle.
 
 - **Animated fill**: a new value doesn't jump. The liquid rises or falls to it at a set speed.

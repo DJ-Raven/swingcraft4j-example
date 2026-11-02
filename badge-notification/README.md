@@ -1,5 +1,7 @@
 # Badge Notification
 
+![Badge Notification](thumbnail.jpg)
+
 An animated notification badge (`Badge`) that decorates any component — button, text field, label — through a `JLayer`, without touching the component's own border or UI.
 
 - **Count, text or dot** — `setCount(5)` shows "5" (capped at "99+", adjustable with `setMaxCount`), `setText("new")` shows any text, and `null` text paints a small dot.

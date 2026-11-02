@@ -1,5 +1,7 @@
 # Loading
 
+![Loading](thumbnail.jpg)
+
 Animated loading indicators (`LoadingIcon`). Each one is a plain Swing `Icon`, so it works anywhere an icon does: labels, buttons, text-field trailing components, and so on.
 
 - **Built-in types, one class each**, grouped by family in `painter.arc`, `painter.dots`, `painter.shape` and `painter.text`.

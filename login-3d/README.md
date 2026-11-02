@@ -1,5 +1,7 @@
 # Login 3D
 
+![Login 3D](thumbnail.jpg)
+
 A macOS style login card (`LoginForm`) on an animated 3D background (`Background3D`) that reacts to the mouse. The scenes are drawn with Java2D only: the 3D math, the projection, the depth sort and the lighting are plain Java, with no OpenGL and no native library.
 
 - **10 scenes**: Globe, Wave, Knot, Galaxy, Cubes, Helix, Tunnel, Atom, Morph and Crystal. Switching scenes fades from one to the next.

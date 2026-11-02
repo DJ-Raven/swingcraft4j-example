@@ -1,5 +1,7 @@
 # Tree Hover Action
 
+![Tree Hover Action](thumbnail.jpg)
+
 A `JTree` (`HoverActionTree`) that adds three things on top of FlatLaf's tree UI:
 
 - **Hover action icons** — small trailing icon buttons (add / edit / more, or whatever you define) that appear on whichever row the mouse is over, right-aligned in the row.

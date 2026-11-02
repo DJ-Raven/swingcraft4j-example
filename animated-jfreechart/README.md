@@ -1,5 +1,7 @@
 # Animated JFreeChart
 
+![Animated JFreeChart](thumbnail.jpg)
+
 Animated charts built on [JFreeChart](https://github.com/jfree/jfreechart), styled to match the FlatLaf theme. JFreeChart has no animation of its own, so a small animator drives each chart frame by frame: it changes the dataset, or how much of the plot is revealed, on each tick, and JFreeChart repaints.
 
 ## Charts

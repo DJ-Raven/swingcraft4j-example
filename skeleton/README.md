@@ -1,5 +1,7 @@
 # Skeleton
 
+![Skeleton](thumbnail.jpg)
+
 `Skeleton` is a `LayerUI` for `JLayer` that shows loading placeholders. While loading, it hides the real view and draws shimmering placeholder shapes that follow the view's layout. Because the shapes come from the real components, you don't need to build a separate "loading" screen:
 
 - **Labels** become a bar the width of their text, plus a rounded block where an icon would be.

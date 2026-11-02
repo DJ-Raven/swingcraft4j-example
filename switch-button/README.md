@@ -1,5 +1,7 @@
 # Switch Button
 
+![Switch Button](thumbnail.jpg)
+
 Animated switch (`SwitchIcon`) for a `JCheckBox` or `JToggleButton`. It's a plain Swing `Icon` built on FlatLaf's `FlatAnimatedIcon`, so the button keeps its normal selection model, events and keyboard handling. Only the look changes.
 
 - **8 types**: `CLASSIC`, `INSET`, `OVERHANG`, `LINE`, `SOFT`, `TONAL`, `MATERIAL`, `LINE_TINTED`.

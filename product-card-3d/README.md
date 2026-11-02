@@ -1,5 +1,7 @@
 # Product Card 3D
 
+![Product Card 3D](thumbnail.jpg)
+
 A product card (`ProductCard`) that tilts in 3D toward the mouse while its product image pops out of the card. Everything is drawn with Java2D: the perspective projection is plain Java, with no OpenGL and no native library.
 
 - **3D tilt**: the card turns toward the mouse with a real perspective, not a skew, and eases back flat when the mouse leaves.

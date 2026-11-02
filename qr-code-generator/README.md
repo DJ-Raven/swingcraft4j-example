@@ -1,5 +1,7 @@
 # QR Code Generator
 
+![QR Code Generator](thumbnail.jpg)
+
 Component (`QrCodeView`) that draws a QR code with custom styles. You choose the shape of the body modules, the eye frames and the eye balls, add colors and a gradient, and put a logo in the center. [ZXing](https://github.com/zxing/zxing) only encodes the text. Everything else is drawn with Java2D, so the code stays sharp at any size.
 
 - **12 body shapes**: square, rounded, dots, fluid (joined modules with rounded corners), horizontal lines, vertical lines, leaf, diamond, connected dots, hexagon, cross and star.
