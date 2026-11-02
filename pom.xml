@@ -19,6 +19,7 @@
         <module>qr-code-generator</module>
         <module>animated-jfreechart</module>
         <module>login-3d</module>
+        <module>product-card-3d</module>
     </modules>
 
     <properties>
